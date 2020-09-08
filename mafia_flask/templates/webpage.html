@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <SCRIPT LANGUAGE="JavaScript">
+    function testResults(form) {
+      var TestVar = form.played_new.value;
+      alert("You typed: " + TestVar);
+    }
+  </SCRIPT>
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      text-align: center;
+    }
+
+    label {
+      width: 40%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    input {
+      width: 55%;
+    }
+
+    input[type=radio] {
+      width: 5%;
+    }
+
+    .outer-box {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-pic {
+      background-image: url('https://image.freepik.com/free-vector/mafia-logo_74829-29.jpg');
+      background-size: cover;
+      width: 31%;
+    }
+
+    .right-pic {
+      background-image: url('https://i.pinimg.com/originals/d2/b9/01/d2b901c08abad5a690a1aa8ccd10ee09.jpg');
+      background-size: cover;
+      width: 31%;
+    }
+
+    .rad-div {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .div-form {
+      text-align: center;
+      display: inline-block;
+      width: 30%
+    }
+
+    #signup-form {
+      text-align: left;
+      display: inline-block;
+    }
+
+    .description {
+      font-size: 20px;
+    }
+
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+  </style>
+
+  <h1 id="title">Mafia Sign-Up Form</h1>
+  <div class="outer-box">
+    <div class=left-pic>
+    </div>
+    <div class="div-form">
+      <p class="description" id="description">The mafia has returned to wreack havoc amongst the town! Will you oust them from your home, or possibly join their madness? Sign up now!</p>
+      <form id="signup-form" action="/Users\joshd\Desktop\HTML\form_answers.html" method="post">
+        <label for "name" id="name-label">Name: </label>
+        <input id="name" type="text" placeholder="Name" required name="full_name">
+        <label for "email" id="email-label">E-mail: </label>
+        <input id="email" type="email" placeholder="E-Mail" required name="email">
+        <label for "number" id="number-label">Phone Number: </label>
+        <input id="number" type="text" placeholder="Phone Number" required name="phone_number">
+        <div class="rad-div">
+          <input id="new" value="new" type="radio" name="played_new">New Player
+          <input id="played" type="radio" value="played" name="played_new">Played Before
+        </div>
+        <textarea id="comments" rows="5" cols="50" placeholder="Write Additional Comments..." resize: none name="comments"></textarea>
+        <button class="registerbtn" type="submit" id="submit" onClick="testResults(this.form)">Submit</button>
+      </form>
+    </div>
+    <div class=right-pic>
+    </div>
+  </div>
+</body>
+
+</html>
